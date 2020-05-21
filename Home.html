@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>About me</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- GRT Youtube Plugin CSS -->
+    <link rel="stylesheet" href="css/grt-responsive-menu.css">
+
+    <!-- kuvagalleria -->
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <!-- General style css -->
+    <link href="portfolio.css" rel="stylesheet">
+
+    <style>
+        .container {
+            padding:100px;
+            background-color: rgba(136, 168, 73, 0.1);
+        }
+
+        .panel, .flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+.panel {
+  padding: 50px;
+  display: none;
+}
+
+        #gallery img {
+            height: 120px;
+            box-shadow: 8px 8px 8px grey;
+            margin: 5px;
+        }
+
+        #gallery{
+            text-align: center;
+            /* keskittää kuvat */
+            margin-bottom: 100px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="menu-container">
+            <div class="row no-margin">
+                <div class="col-sm-8 col-xs-6 no-padding">
+                    <nav>
+                        <button class="grt-mobile-button">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </button>
+                        <ul class="grt-menu">
+                            <li class="active"><a href="Home.html">ABOUT ME</a></li>
+                            <li><a href="Education.html">EDUCATION</a></li>
+                            <li><a href="WorkExperience.html">WORK EXPERIENCE</a></li>
+
+                            <li class="grt-dropdown"><a>SKILLS AND TOOLS</a>
+                                <ul class="grt-dropdown-list">
+                                    <li><a href="Skills.html">PROGRAMMING</a></li>
+                                    <li><a href="Skills.html">INTERPERSONAL SKILLS</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <article>
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6" id="profile">
+                <div class="card" style="width:400px">
+                    <div class="card-body">
+                        <h2 class="card-title">Ella Raveala</h2>
+                        <p class="card-text">ICT-student from Haaga-Helia University of Applied Sciences</p>
+                    </div>
+                    <img class="card-img-bottom" src="images/CV_kuva2019Edit.jpeg" alt="Card image" style="width:100%"><br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6" id="contact">
+                    
+                            <h2>Contact</h2>
+                            <p class="card-text">Location: Helsinki, Finland</p>
+                            <div id="flip1" class="flip">Email</div>
+                            <div id="panel1" class="panel">ella-katarina@hotmail.com</div>
+                            <div id="flip2" class="flip">Phone</div>
+                            <div id="panel2" class="panel">040 123 4567</div>
+                            <br><br>
+                        <a href="https://www.linkedin.com/in/ella-raveala-27996614a/" class="btn btn-primary">Linkedin</a>
+                        <a href="https://github.com/EllaRaveala/" class="btn btn-primary">GitHub</a>
+                    </div>
+                </div>
+        </div>
+
+            <div id=#hobbies>
+                <h2>My hobbies</h2>
+                <div class="container-fluid" style="margin-top:60px;" id="gallery">
+                    <a href="images/Traveling.jpg" data-lightbox="roadtrip" title="Traveling"><img src="images/Traveling.jpg" alt="Traveling"></a>
+                    <a href="images/Dancing.jpg" data-lightbox="roadtrip"><img src="images/Dancing.jpg" alt="Dancing"></a>
+                    <a href="images/Jogging.jpg" data-lightbox="roadtrip"><img src="images/Jogging.jpg" alt="Jogging"></a>
+                    <a href="images/Cooking.jpg" data-lightbox="roadtrip"><img src="images/Cooking.jpg" alt="Cooking"></a>
+                </div>
+                <div></div>
+            </div>
+
+            <div class="feedback">
+                <div class="rows">
+                <div class="col-md-6">
+                    <h2 id="otsikko"> Leave feedback about my portfolio</h2>
+                        <form>
+                        Content<br>
+                        <label>
+                            <input type="radio" name="content" value="1"> 1 - very bad
+                           </label><br>
+                            <label>
+                            <input type="radio" name="content" value="2"> 2 - bad
+                           </label><br>
+                            <label>
+                            <input type="radio" name="content" value="3"> 3 - ok
+                           </label><br>
+                            <label>
+                            <input type="radio" name="content" value="4"> 4 - good
+                           </label><br>
+                           <label>
+                            <input type="radio" name="content" value="5"> 5 - very good
+                           </label>
+                           <br><br>
+                           Layout and design
+                          <br>
+                           <select id="design">
+                             <option value="1">1 - very bad</option>
+                             <option value="2">2 - bad</option>
+                             <option value="3">3 - ok</option>
+                             <option value="4">4 - good</option>
+                             <option value="5">5  - very good</option>
+                           </select>
+                           <br><br>
+                           What could be improved?
+                           <br>
+                           <label>
+                            <input type="checkbox" name="lisaa" value="kuvia"> Content
+                           </label><br>
+                             <label>
+                            <input type="checkbox" name="lisaa" value="reseptejä"> Navigation
+                           </label><br>
+                               <label>
+                            <input type="checkbox" name="lisaa" value="tapahtumat"> Layout and design
+                           </label>
+                           <br><br>
+                           Please explain how: 
+                           <br>
+                           <textarea id="viesti"  rows="4" cols="50"></textarea>
+                           <br><br>
+                        <button onClick="laheta()">Lähetä</button>
+                        </form>
+                </div>
+                
+                <div class="col-md-6">
+                    <h2>Summary</h2>
+                    <div id="feebackSummary">
+                    </div>
+                
+                
+                </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </article>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/grt-responsive-menu.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+          $("#flip1").click(function(){
+            $("#panel1").slideToggle("slow");
+          });
+        });
+        $(document).ready(function(){
+          $("#flip2").click(function(){
+            $("#panel2").slideToggle("slow");
+          });
+        });
+    </script>
+
+
+</body>
+
+</html>
