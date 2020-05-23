@@ -1,99 +1,133 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Education</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Education</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <!-- GRT Youtube Plugin CSS -->
-    <link rel="stylesheet" href="css/grt-responsive-menu.css">
+        <!-- GRT Youtube Plugin CSS -->
+        <link rel="stylesheet" href="css/grt-responsive-menu.css">
 
-    <!-- slider -->
-    <link rel="stylesheet" href="css/jquery.bxslider.css">
+        <!-- slider -->
+        <link rel="stylesheet" href="css/jquery.bxslider.css">
 
-    <!-- galleria -->
-    <link rel="stylesheet" href="css/lightbox.css">
+        <!-- galleria -->
+        <link rel="stylesheet" href="css/lightbox.css">
 
-    <!-- General style css -->
-    <link href="portfolio.css" rel="stylesheet">
+        <style>
+            .container {
+                padding: 100px;
+                background-color: rgba(136, 168, 73, 0.1);
+            }
+            #quotes {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            #image img{
+                width:100%;
+                margin-top: 100px;
+            }
+            h3{
+                text-align: center;
+            }
 
-    <style>
-        .container {
-            padding: 100px;
-            background-color: rgba(136, 168, 73, 0.1);
-        }
+        </style>
 
-        #quotes {
-            text-align: center;
-        }
+    </head>
 
-    </style>
+    <body>
+        <header>
+            <div class="menu-container">
+                <div class="row no-margin">
+                    <div class="col-sm-8 col-xs-6 no-padding">
+                        <nav>
+                            <button class="grt-mobile-button">
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                                <div class="line3"></div>
+                            </button>
+                            <ul class="grt-menu">
+                                <li class="active">
+                                    <a href="Home.html">ABOUT ME</a>
+                                </li>
+                                <li>
+                                    <a href="Education.html">EDUCATION</a>
+                                </li>
+                                <li>
+                                    <a href="WorkExperience.html">WORK EXPERIENCE</a>
+                                </li>
 
-</head>
-
-<body>
-    <header>
-        <div class="menu-container">
-            <div class="row no-margin">
-                <div class="col-sm-8 col-xs-6 no-padding">
-                    <nav>
-                        <button class="grt-mobile-button">
-                            <div class="line1"></div>
-                            <div class="line2"></div>
-                            <div class="line3"></div>
-                        </button>
-                        <ul class="grt-menu">
-                            <li class="active"><a href="Home.html">ABOUT ME</a></li>
-                            <li><a href="Education.html">EDUCATION</a></li>
-                            <li><a href="WorkExperience.html">WORK EXPERIENCE</a></li>
-
-                            <li class="grt-dropdown"><a>SKILLS AND TOOLS</a>
-                                <ul class="grt-dropdown-list">
-                                    <li><a href="Skills.html">PROGRAMMING</a></li>
-                                    <li><a href="Skills.html">INTERPERSONAL SKILLS</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
+                                <li class="grt-dropdown">
+                                    <a>SKILLS AND TOOLS</a>
+                                    <ul class="grt-dropdown-list">
+                                        <li>
+                                            <a href="Skills.html">PROGRAMMING</a>
+                                        </li>
+                                        <li>
+                                            <a href="Skills.html">INTERPERSONAL SKILLS</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <article>
-        <div class="container">
-            <div id="quotes"></div>
-        </div>
-    </article>
+        <article>
+            <div class="container row">
+                <div id="quotes"></div>
+                <div id="education" class="col-md-6"></div>
+                <div id="image" class="col-md-6"><img src="images/ID-100289422.jpg" alt="books"/></div>
+            </div>
+        </article>
 
+        <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="js/grt-responsive-menu.js"></script>
+        <script>
+            $.getJSON("https://type.fit/api/quotes", function (data) {
 
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/grt-responsive-menu.js"></script>
-    <script src="js/jquery.bxslider.js"></script>
-    <script src="js/lightbox.min.js"></script>
-    <script>
-        $.getJSON("https://type.fit/api/quotes", function( data ) {
-        
-        var quotes = []; 
+                    var quotes = [];
 
-        quotes.push( "<h4>" + data[0].text + " ~ " + data[0].author + "</h4>" ); 
-        quotes.push( "<h4>" + data[4].text + " ~ " + data[4].author + "</h4>" ); 
-        quotes.push( "<h4>" + data[8].text + " ~ " + data[8].author + "</h4>" ); 
+                    quotes.push("<h4>" + data[0].text + " ~ " + data[0].author + "</h4>");
+                    quotes.push("<h4>" + data[4].text + " ~ " + data[4].author + "</h4>");
+                    quotes.push("<h4>" + data[8].text + " ~ " + data[8].author + "</h4>");
 
-                      
-        $("#quotes").append( quotes.join("") );
-        });
-            
+                    $("#quotes").append(quotes.join(""));
+                });
+
+            $.getJSON("http://www.mocky.io/v2/5ec6b6573200005e00d750c4", function (data) {
+
+                var items = [];
+
+                items.push("<h3> Education history </h3><br><br>");
+
+                items.push("<ul>");
+                $.each(data, function (key, item) {
+                    items.push("<li>" + item.school + "</li>");
+                    items.push("<li>" + item.program + "</li>");
+                    items.push("<li>" + item.location + "</li>");
+                    items.push("<li>" + item.start + "-" + item.end + "</li>");
+                    items.push("<li> gpa: " + item.gpa + "</li><br><br>");
+                });
+                items.push("</ul>");
+
+                $("#education").append(items.join(""));
+            });
         </script>
 
-</body>
+    </body>
 
 </html>

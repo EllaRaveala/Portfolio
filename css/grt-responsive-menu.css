@@ -196,7 +196,7 @@ ul.grt-menu li.grt-dropdown.active-dropdown a {
 }
 
 /* Tablet only style */
-@media (min-width:777px) and (max-width:969px) {
+@media (min-width:778px) and (max-width:969px) {
 	ul.grt-menu li.grt-dropdown:hover > a + ul.grt-dropdown-list {
 		display:block;
 		top: calc(100% - 17px);
@@ -223,7 +223,7 @@ ul.grt-menu li.grt-dropdown.active-dropdown a {
 }
 
 /* Mobile only style */
-@media (max-width:776px) {
+@media (max-width:777px) {
 
 	.menu-container {
 		padding-left: 15px;
